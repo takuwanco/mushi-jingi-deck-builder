@@ -27,7 +27,7 @@ function renderCards(cards) {
       コスト: ${card.cost}<br/>
       ${card.power ? `パワー: ${card.power}<br/>` : ''}
       ${card.effect ? `効果: ${card.effect}<br/>` : ''}
-      <button onclick='addToDeck(${JSON.stringify(card)})'>追加</button>
+      <button onclick="addToDeck('${card.id}')">追加</button>
     `;
     cardList.appendChild(div);
   });
