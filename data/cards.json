@@ -1,0 +1,18 @@
+[
+  {
+    "id": "card001",
+    "name": "炎のドラゴン",
+    "type": "クリーチャー",
+    "cost": 5,
+    "power": 3000,
+    "image": "fire-dragon.png"
+  },
+  {
+    "id": "card002",
+    "name": "水の精霊",
+    "type": "スペル",
+    "cost": 3,
+    "effect": "相手のカードを1枚破壊する",
+    "image": "water-spirit.png"
+  }
+]
