@@ -33,3 +33,10 @@ function renderCards(cards) {
   });
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('savedDeck');
+  if (saved) {
+    deck.push(...JSON.parse(saved));
+    renderDeck();
+  }
+});

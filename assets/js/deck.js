@@ -45,3 +45,27 @@ function renderDeck() {
     container.appendChild(cardEl);
   });
 }
+
+function saveDeck() {
+  localStorage.setItem('savedDeck', JSON.stringify(deck));
+  alert('デッキを保存しました');
+}
+
+function loadDeck() {
+  const saved = localStorage.getItem('savedDeck');
+  if (saved) {
+    deck.length = 0; // 現在のデッキをクリア
+    deck.push(...JSON.parse(saved));
+    renderDeck();
+    alert('保存されたデッキを復元しました');
+  } else {
+    alert('保存されたデッキはありません');
+  }
+}
+
+function clearDeck() {
+  deck.length = 0;
+  localStorage.removeItem('savedDeck');
+  renderDeck();
+  alert('デッキをリセットしました');
+}
