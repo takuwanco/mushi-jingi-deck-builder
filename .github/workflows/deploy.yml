@@ -21,11 +21,13 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
+        with:
+          enablement: true  # ← 初回なら追加すると安全
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: .
+          path: .  # ← 公開したいディレクトリ（例：./dist）
 
       - name: Deploy to GitHub Pages
         id: deployment
