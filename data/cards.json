@@ -1,18 +1,24 @@
 [
   {
-    "id": "card001",
-    "name": "炎のドラゴン",
-    "type": "クリーチャー",
-    "cost": 5,
-    "power": 3000,
-    "image": "fire-dragon.png"
+    "id": "card01-007",
+    "name": "オオカマキリ",
+    "type": "虫",
+    "color": "赤",
+    "cost": 4,
+    "toughness": 800,
+    "power": 800,
+    "effect": "この技を使うとき、この虫以外の自分の虫を1つ選び、破壊する。",
+    "image": "card01-007.png"
   },
   {
-    "id": "card002",
-    "name": "水の精霊",
-    "type": "スペル",
-    "cost": 3,
-    "effect": "相手のカードを1枚破壊する",
-    "image": "water-spirit.png"
+    "id": "card01-008",
+    "name": "オオスズメバチ",
+    "type": "虫",
+    "color": "赤",
+    "cost": 4,
+    "toughness": 800,
+    "power": 800,
+    "effect": "これは1度だけ使用できる。",
+    "image": "card01-008.png"
   }
 ]
