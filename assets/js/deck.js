@@ -7,7 +7,7 @@ function renderCards(cards) {
     const cardEl = document.createElement('div');
     cardEl.className = 'card';
     cardEl.innerHTML = `
-      <img src="assets/img/${card.image}" alt="${card.name}">
+      <img class="card-image" src="assets/img/${card.image}" alt="${card.name}">
       <p>${card.name}</p>
       <button onclick="addToDeck('${card.id}')">追加</button>
     `;
@@ -38,7 +38,7 @@ function renderDeck() {
     const cardEl = document.createElement('div');
     cardEl.className = 'card';
     cardEl.innerHTML = `
-      <img src="assets/img/${card.image}" alt="${card.name}">
+      <img class="card-image" src="assets/img/${card.image}" alt="${card.name}">
       <p>${card.name}</p>
       <button onclick="removeFromDeck('${card.id}')">削除</button>
     `;
