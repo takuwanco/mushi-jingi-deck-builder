@@ -12,7 +12,7 @@ body {
 }
 
 .card-image {
-  width: 100px;
+  width: 160px;
   height: auto;
   object-fit: contain;
   margin-bottom: 6px;
@@ -23,8 +23,8 @@ body {
 #card-list,
 #deck {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* ← 最小幅を広げる */
+  gap: 16px;
 }
 
 #deck-list {
