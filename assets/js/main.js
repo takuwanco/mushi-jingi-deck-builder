@@ -32,3 +32,4 @@ function renderCards(cards) {
     cardList.appendChild(div);
   });
 }
+
