@@ -48,7 +48,7 @@ function renderDeck() {
       cardEl.className = 'card';
       cardEl.innerHTML = `
         <img class="card-image" src="assets/img/${card.image}" alt="${card.name}">
-        <p>${card.name} (${i + 1})</p>
+        <p>${card.name}</p>
         <button onclick="removeFromDeck('${card.id}')">削除</button>
       `;
       container.appendChild(cardEl);
