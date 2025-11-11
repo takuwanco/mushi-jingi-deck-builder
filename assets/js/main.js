@@ -15,28 +15,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function renderCards(cards) {
-  const cardList = document.getElementById('card-list');
-  cardList.innerHTML = '';
+  const container = document.getElementById('card-list');
+  container.innerHTML = '';
   cards.forEach(card => {
-    const div = document.createElement('div');
-    div.className = 'card';
-    div.innerHTML = `
-      <img src="assets/img/${card.image}" alt="${card.name}" class="card-image" />
-      <strong>${card.name}</strong><br/>
-      タイプ: ${card.type}<br/>
-      コスト: ${card.cost}<br/>
-      ${card.power ? `パワー: ${card.power}<br/>` : ''}
-      ${card.effect ? `効果: ${card.effect}<br/>` : ''}
+    const cardEl = document.createElement('div');
+    cardEl.className = 'card';
+    cardEl.innerHTML = `
+      <img class="card-image" src="assets/img/${card.image}" alt="${card.name}">
+      <p>${card.name}</p>
       <button onclick="addToDeck('${card.id}')">追加</button>
     `;
-    cardList.appendChild(div);
+    container.appendChild(cardEl);
   });
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('savedDeck');
-  if (saved) {
-    deck.push(...JSON.parse(saved));
-    renderDeck();
-  }
-});
+function addToDeck(cardId) {
+  if (deck.includes(cardId)) return;
+  deck.push(cardId);
+  renderDeck();
+}
