@@ -8,7 +8,7 @@ function renderCards(cards) {
     cardEl.className = 'card';
     cardEl.innerHTML = `
       <img class="card-image" src="assets/img/${card.image}" alt="${card.name}">
-      <button onclick="addToDeck('${card.id}')">追加</button>
+      <div class="add-overlay" onclick="addToDeck('${card.id}')">＋</div>
     `;
     container.appendChild(cardEl);
   });
