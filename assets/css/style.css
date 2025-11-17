@@ -5,10 +5,17 @@ body {
 }
 
 .card {
+  position: relative; /* 削除アイコンの絶対位置指定の基準 */
   border: 1px solid #ccc;
   padding: 6px;
   background-color: #fff;
   text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .card-image {
@@ -19,6 +26,26 @@ body {
   border-radius: 4px;
 }
 
+/* 削除アイコンの初期状態（非表示） */
+.delete-overlay {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: none;
+  font-size: 14px;
+  line-height: 1;
+  z-index: 1;
+}
+
+/* ホバー時に削除アイコンを表示 */
+.card:hover .delete-overlay {
+  display: block;
+}
 
 #card-list,
 #deck {
